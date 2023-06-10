@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ChatMessage from '$lib/components/ChatMessage.svelte'
-	import {ChatCompletionRequestMessage} from "openai";
+	import type {ChatCompletionRequestMessage} from "openai";
  	import {SSE} from "sse.js"
 
 	let query: string = "";
