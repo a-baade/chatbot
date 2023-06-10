@@ -3,6 +3,11 @@ import {OPENAI_KEY} from "$env/static/private"
 import type {ChatCompletionRequestMessage, CreateChatCompletionRequest} from "openai";
 import {getTokens} from "../../../lib/tokenizer";
 import { json } from "@sveltejs/kit";
+import type {Config} from "@sveltejs/adapter-vercel";
+
+export const config: Config = {
+    runtime: "edge"
+}
 
 export const POST: RequestHandler = async ({request}) => {
 
